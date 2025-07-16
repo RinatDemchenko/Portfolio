@@ -52,7 +52,7 @@ export default function Skill({
 }: SkillProps) {
   return (
     <div
-      className="flex glass-card py-6 min-h-30 px-4 w-[95%] max-w-sm rounded-md flex-row items-center justify-around border-2 border-gray-700/60 transition-all duration-300 hover:shadow-xl hover:shadow-gray-500/10 hover:transform hover:scale-105"
+      className="flex glass-card backdrop-blur-md py-6 min-h-30 px-4 w-[95%] max-w-sm rounded-md flex-row items-center justify-around border-2 border-gray-700/60 transition-all duration-300 hover:shadow-xl hover:shadow-gray-500/10 hover:transform hover:scale-105"
       style={
         {
           "--hover-border-color": background,

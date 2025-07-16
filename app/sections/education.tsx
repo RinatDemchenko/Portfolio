@@ -19,7 +19,7 @@ export default function Education() {
 
   return (
     <div className="flex flex-col items-center justify-center gap-10 w-[95%]">
-      <div className="relative max-w-[420px] w-full flex items-center justify-center p-3 gap-5 glass-card rounded-2xl border-2 border-gray-700/60">
+      <div className="relative max-w-[420px] w-full flex items-center justify-center p-3 gap-5 glass-card backdrop-blur-md rounded-2xl border-2 border-gray-700/60">
         {/* Animated slider */}
         <div
           className={`absolute top-2 bottom-2 w-1/2 rounded-xl transition-all duration-500 ease-out ${
@@ -86,7 +86,7 @@ export default function Education() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="glass-card p-8 rounded-2xl border-4 border-gray-700/60 max-w-2xl w-full hover:shadow-2xl hover:shadow-blue-400/10 hover:border-blue-100/40 transform hover:scale-[1.02] transition-all duration-500">
+            <div className="glass-card backdrop-blur-md p-8 rounded-2xl border-4 border-gray-700/60 max-w-2xl w-full hover:shadow-2xl hover:shadow-blue-400/10 hover:border-blue-100/40 transform hover:scale-[1.02] transition-all duration-500">
               <div className="flex flex-col md:flex-row gap-6 items-center">
                 {/* University logo */}
                 <div className="w-24 h-24 rounded-full bg-blue-400/20 flex items-center justify-center border-2 border-blue-400/30 hover:bg-blue-400/30 hover:border-blue-400/50 hover:scale-110 transition-all duration-300 shadow-lg shadow-blue-400/20">
@@ -157,7 +157,7 @@ export default function Education() {
             {education.courses.map((course, index) => (
               <div
                 key={index}
-                className="glass-card p-6 rounded-2xl border-2 border-gray-700/60 hover:shadow-xl hover:shadow-green-400/20 hover:border-green-400/30 transition-all duration-300 group"
+                className="glass-card backdrop-blur-md p-6 rounded-2xl border-2 border-gray-700/60 hover:shadow-xl hover:shadow-green-400/20 hover:border-green-400/30 transition-all duration-300 group"
               >
                 {/* Course logo */}
                 <div className="flex justify-center mb-4">
