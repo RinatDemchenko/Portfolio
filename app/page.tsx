@@ -16,7 +16,7 @@ export default function Home() {
       <main className="">
         <div
           id="intro"
-          className="w-screen min-h-screen flex items-center justify-start gap-10 intro-background md:flex-row flex-col md:justify-center px-4"
+          className="w-screen min-h-screen backdrop-blur-[1.5px] flex items-center justify-start gap-10 intro-background md:flex-row flex-col md:justify-center px-4"
         >
           <Intro />
         </div>
@@ -48,7 +48,7 @@ export default function Home() {
           <Education />
         </div>
       </main>
-      <footer className="footer-background w-screen min-h-60 flex flex-row flex-wrap items-center justify-center px-5 py-10">
+      <footer className="footer-background backdrop-blur-[1px] w-screen min-h-60 flex flex-row flex-wrap items-center justify-center px-5 py-10">
         <Footer />
       </footer>
     </div>

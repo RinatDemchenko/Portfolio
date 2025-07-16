@@ -16,17 +16,9 @@ body {
   z-index: 1;
   isolation: isolate;
 }
-@supports (backdrop-filter: blur(8px)) {
-  .glass-card {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-}
 
 .social-icon {
   box-shadow: 0 4px 30px rgba(32, 36, 255, 0.2);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
   position: relative;
 }
 
@@ -75,8 +67,6 @@ body {
     rgba(97, 82, 255, 0.15) 80%,
     rgba(84, 68, 255, 0.25) 100%
   );
-  backdrop-filter: blur(1.5px);
-  -webkit-backdrop-filter: blur(1.5px);
 }
 
 .general-background {
@@ -128,8 +118,6 @@ body {
     rgba(79, 130, 255, 0.14) 85%,
     rgba(32, 200, 255, 0.14) 100%
   );
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
   border-bottom: 1px solid rgba(45, 138, 255, 0.25);
 }
 
