@@ -56,38 +56,38 @@ export default function Intro() {
 
         {/* Кнопки действий */}
         <div className="flex gap-4 mt-4 mb-10 animate-slide-in-up md:mb-0">
-          <button className="button-primary shimmer-animation glow-effect px-6 py-3 rounded-xl font-semibold text-white cursor-pointer transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2">
+          <Link href="mailto:rinatdemchenko@gmail.com" className="button-primary shimmer-animation glow-effect px-6 py-3 rounded-xl font-semibold text-white cursor-pointer transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2">
             <FaEnvelope size={16} />
             Email me
-          </button>
-          <button className="button-outline glow-effect px-6 py-3 rounded-xl font-semibold cursor-pointer transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2">
+          </Link>
+          <Link href="/CV.pdf" className="button-outline glow-effect px-6 py-3 rounded-xl font-semibold cursor-pointer transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2">
             <FaDownload size={16} />
             Download CV
-          </button>
+          </Link>
         </div>
 
         {/* Социальные иконки */}
         <div className="flex gap-4 mb-6 mt-2 animate-slide-in-up md:mb-0">
           <Link
-            href="https://www.linkedin.com/in/placeholder"
+            href="https://www.linkedin.com/in/rinat-demchenko-28ab29372"
             className="text-white text-lg bg-blue-500/10 p-3 rounded-lg border-teal-transparent social-icon cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:scale-110"
           >
             <FaLinkedin className="rounded-lg" size={24} />
           </Link>
           <Link
-            href="https://github.com/placeholder"
+            href="https://github.com/RinatDemcenko"
             className="text-white text-lg bg-blue-500/10 p-3 rounded-lg border-teal-transparent social-icon cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:scale-110"
           >
             <FaGithub className="rounded-lg" size={24} />
           </Link>
           <Link
-            href="https://t.me/placeholder"
+            href="https://t.me/RinatDem"
             className="text-white text-lg bg-blue-500/10 p-3 rounded-lg border-teal-transparent social-icon cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:scale-110"
           >
             <FaTelegram className="rounded-lg" size={24} />
           </Link>
           <Link
-            href="https://wa.me/380931234567"
+            href="https://wa.me/380636918815"
             className="text-white text-lg bg-blue-500/10 p-3 rounded-lg border-teal-transparent social-icon cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:scale-110"
           >
             <FaWhatsapp className="rounded-lg" size={24} />
