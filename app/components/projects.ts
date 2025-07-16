@@ -14,10 +14,10 @@ export const projects = [
     description:
       "A utility app for finding places near(30minutes away from) you on a map and sorting them by categories(screenshots taken with VPN on).",
     images: [
-      "/projects/mapsy/1.jpg",
-      "/projects/mapsy/2.jpg",
-      "/projects/mapsy/3.jpg",
-      "/projects/mapsy/4.jpg",
+      "/projects/Mapsy/1.jpg",
+      "/projects/Mapsy/2.jpg",
+      "/projects/Mapsy/3.jpg",
+      "/projects/Mapsy/4.jpg",
     ],
     links: [
       "https://github.com/RinatDemcenko/Mapsy",
@@ -40,11 +40,11 @@ export const projects = [
     description:
       "Recipe app that allows you to find recipes by ingredients and categories.",
     images: [
-      "/projects/recipeak/1.jpg",
-      "/projects/recipeak/2.jpg",
-      "/projects/recipeak/3.jpg",
-      "/projects/recipeak/4.jpg",
-      "/projects/recipeak/5.jpg",
+      "/projects/Recipeak/1.jpg",
+      "/projects/Recipeak/2.jpg",
+      "/projects/Recipeak/3.jpg",
+      "/projects/Recipeak/4.jpg",
+      "/projects/Recipeak/5.jpg",
     ],
     links: [
       "https://github.com/RinatDemcenko/ReciPeak",

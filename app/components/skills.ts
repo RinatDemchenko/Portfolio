@@ -72,7 +72,7 @@ export const skills = [
   {
     name: "WordPress",
     background: "#21759B",
-    image: "/icons/wordpress.png",
+    image: "/icons/wordPress.png",
     description: "Content management system.",
     categories: ["Frontend"],
   },
