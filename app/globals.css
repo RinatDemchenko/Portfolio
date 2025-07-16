@@ -7,12 +7,22 @@
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background: black;
 }
 
 .glass-card {
   background: rgba(73, 73, 73, 0.15);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+@supports (backdrop-filter: blur(8px)) {
+  .glass-card {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
 }
 
 .social-icon {
@@ -328,7 +338,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 255, 213, 0.7); 
+  background: rgba(0, 255, 213, 0.7);
   border-radius: 6px;
 }
 
