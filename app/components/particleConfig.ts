@@ -87,7 +87,7 @@ export const particlesConfig: ISourceOptions = {
         width: 900,
         height: 900,
       },
-      value: 120,
+      value: 85,
     },
     opacity: {
       value: {
@@ -127,4 +127,35 @@ export const particlesConfig: ISourceOptions = {
       value: true,
     },
   },
+  responsive: [
+    {
+      maxWidth: 768,
+      options: {
+        particles: {
+          number: {
+            value: 50,
+          },
+          move: {
+            speed: {
+              min: 0.5,
+              max: 2,
+            },
+          },
+        },
+        interactivity: {
+          events: {
+            onClick: {
+              enable: false,
+            },
+            onHover: {
+              enable: false,
+              parallax: {
+                enable: false,
+              },
+            },
+          },
+        },
+      },
+    },
+  ],
 };
