@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import {
   FaBars,
@@ -9,6 +8,7 @@ import {
   FaPaintBrush,
   FaCloud,
 } from "react-icons/fa";
+// Skills data imported from separate configuration file
 import { skills } from "../components/skills";
 import Skill from "../components/skill";
 
@@ -43,7 +43,7 @@ export default function Skills() {
             category === "All"
               ? `${getCategoryBgColor(
                   "All"
-                )} shadow-lg shadow-gray-400/30 transform scale-105`
+                )} shadow-md shadow-gray-400/30 transform scale-105`
               : "hover:bg-gray-400/20"
           }`}
           onClick={() => setCategory("All")}
@@ -57,7 +57,7 @@ export default function Skills() {
             category === "Frontend"
               ? `${getCategoryBgColor(
                   "Frontend"
-                )} shadow-lg shadow-green-300/30 transform scale-105`
+                )} shadow-md shadow-green-300/30 transform scale-105`
               : "hover:bg-green-300/20"
           }`}
           onClick={() => setCategory("Frontend")}
@@ -73,7 +73,7 @@ export default function Skills() {
             category === "Backend"
               ? `${getCategoryBgColor(
                   "Backend"
-                )} shadow-lg shadow-blue-400/30 transform scale-105`
+                )} shadow-md shadow-blue-400/30 transform scale-105`
               : "hover:bg-blue-400/20"
           }`}
           onClick={() => setCategory("Backend")}
@@ -89,7 +89,7 @@ export default function Skills() {
             category === "Database"
               ? `${getCategoryBgColor(
                   "Database"
-                )} shadow-lg shadow-yellow-400/30 transform scale-105`
+                )} shadow-md shadow-yellow-400/30 transform scale-105`
               : "hover:bg-yellow-400/20"
           }`}
           onClick={() => setCategory("Database")}
@@ -105,7 +105,7 @@ export default function Skills() {
             category === "Design"
               ? `${getCategoryBgColor(
                   "Design"
-                )} shadow-lg shadow-pink-400/30 transform scale-105`
+                )} shadow-md shadow-pink-400/30 transform scale-105`
               : "hover:bg-pink-400/20"
           }`}
           onClick={() => setCategory("Design")}
@@ -119,7 +119,7 @@ export default function Skills() {
             category === "DevOps"
               ? `${getCategoryBgColor(
                   "DevOps"
-                )} shadow-lg shadow-white/30 transform scale-105`
+                )} shadow-md shadow-white/30 transform scale-105`
               : "hover:bg-white/20"
           }`}
           onClick={() => setCategory("DevOps")}
@@ -128,7 +128,7 @@ export default function Skills() {
           <span className="text-xs text-white mt-1 font-medium">DevOps</span>
         </div>
       </div>
-          {/* overall container size is dependent on the size of this grid */}
+      {/* overall container size is dependent on the size of this grid */}
       <div
         id="skills"
         className="grid w-full grid-cols-1 items-center place-items-center gap-4 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4"

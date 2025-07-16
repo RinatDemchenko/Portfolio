@@ -1,5 +1,10 @@
 import type { ISourceOptions } from "@tsparticles/engine";
 
+/**
+ * Particle animation configuration
+ * Controls the behavior, appearance, and interactions of background particles
+ * Used by the Background component to create floating particle effects
+ */
 export const particlesConfig: ISourceOptions = {
   autoPlay: true,
   background: {

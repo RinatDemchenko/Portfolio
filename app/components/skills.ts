@@ -1,3 +1,10 @@
+/**
+ * Skills data configuration
+ * This file contains all technical skills and tools information displayed in the Skills section
+ * Each skill includes: name, background color, icon path, description, and categories
+ * Categories are used for filtering skills by type (Frontend, Backend, Database, etc.)
+ */
+
 export const skills = [
   {
     name: "React",

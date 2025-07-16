@@ -1,8 +1,9 @@
+// Projects data imported from separate configuration file
 import { projects } from "../components/projects";
 import Project from "../components/project";
 
 export default function Projects() {
-  // there will be a cetegory switch for work and hobby projects, i just don't have any work projects yet
+  // TODO: Add category switch for work and hobby projects when work projects are available
   return (
     <div className="flex flex-wrap items-center justify-center gap-10 w-full">
       {projects.map((project) => (

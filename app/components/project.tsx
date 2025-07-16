@@ -10,6 +10,11 @@ import {
 } from "react-icons/fa";
 import { useState } from "react";
 
+/**
+ * Individual project component
+ * Displays a single project with image carousel, description, tech stack, and links
+ * Used by the Projects section to render each project from the projects data
+ */
 export default function Project({
   name,
   description,

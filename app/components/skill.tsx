@@ -1,5 +1,4 @@
-'use client'
-
+"use client";
 import React from "react";
 import Image from "next/image";
 import {
@@ -10,6 +9,11 @@ import {
   FaCloud,
 } from "react-icons/fa";
 
+/**
+ * Individual skill component
+ * Displays a single skill with animated card, icon, and category-based styling
+ * Used by the Skills section to render each skill from the skills data
+ */
 export interface SkillProps {
   name: string;
   image: string;
