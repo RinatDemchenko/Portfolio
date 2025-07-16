@@ -10,12 +10,12 @@
 
 export const education = {
   university: {
-    name: "TUKE",
+    name: "TUKE FEI",
     description:
       "Computer Networks Bachelor's degree. Currently starting 3rd year of study.",
     date: "2023-2026",
     image: "/icons/fei.png",
-    conformation: "/conformation.jpg",
+    conformation: "/confirmation.jpg",
   },
   courses: [
     {

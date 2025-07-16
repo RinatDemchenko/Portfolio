@@ -22,27 +22,27 @@ export default function Home() {
         </div>
         <div
           id="skills"
-          className="w-screen min-h-screen flex flex-col items-center justify-center general-background py-20"
+          className="w-screen min-h-screen flex flex-col items-center justify-start general-background py-20"
         >
-          <h1 className="text-white text-5xl text-center font-bold mb-5">
+          <h1 className="text-white text-5xl text-center font-bold mb-16 mt-8 z-10 text-neon-glow">
             Technologies I use
           </h1>
           <Skills />
         </div>
         <div
           id="projects"
-          className="w-screen min-h-screen flex flex-col items-center justify-center background-reverse py-20"
+          className="w-screen min-h-screen flex flex-col items-center justify-start background-reverse py-20"
         >
-          <h1 className="text-white text-5xl text-center font-bold mb-5 z-10">
+          <h1 className="text-white text-5xl text-center font-bold mb-16 mt-8 z-10 text-neon-glow">
             My recent projects
           </h1>
           <Projects />
         </div>
         <div
           id="education"
-          className="w-screen min-h-screen flex flex-col items-center justify-center general-background py-20"
+          className="w-screen min-h-screen flex flex-col items-center justify-start general-background py-20"
         >
-          <h1 className="text-white text-5xl text-center font-bold mb-5 z-10">
+          <h1 className="text-white text-5xl text-center font-bold mb-16 mt-8 z-10 text-neon-glow">
             Education
           </h1>
           <Education />

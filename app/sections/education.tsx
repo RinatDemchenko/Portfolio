@@ -122,7 +122,7 @@ export default function Education() {
                       >
                         <FaExternalLinkAlt className="text-sm" />
                         <span className="text-sm font-medium">
-                          University page
+                          Faculty page
                         </span>
                       </Link>
                     </div>

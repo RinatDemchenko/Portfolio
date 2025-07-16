@@ -344,3 +344,9 @@ html {
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 255, 208, 0.7) transparent;
 }
+
+/* Subtle white neon glow effect for section headers */
+.text-neon-glow {
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.2),
+    0 0 6px rgba(255, 255, 255, 0.15);
+}
