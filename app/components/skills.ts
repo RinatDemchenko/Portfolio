@@ -94,7 +94,7 @@ export const skills = [
     name: "JavaScript",
     background: "#F7DF1E",
     image: "/icons/javascript.png",
-    description: "Programming language.",
+    description: "Web programming language.",
     categories: ["Frontend"],
   },
   {
