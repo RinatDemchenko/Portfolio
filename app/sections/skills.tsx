@@ -36,7 +36,7 @@ export default function Skills() {
 
   return (
     <div className="flex gap-4 justify-center items-center flex-col">
-      <div className="flex flex-row flex-wrap items-center justify-center w-[95%]  min-h-30 glass-card backdrop-blur-md rounded-lg border-2 border-gray-700/60 p-2 gap-6">
+      <div className="flex flex-row flex-wrap items-center justify-center w-[95%]  min-h-30 glass-card backdrop-blur-sm rounded-lg border-2 border-gray-700/60 p-2 gap-6">
         <div
           id="All"
           className={`w-20 flex flex-col items-center justify-center p-3 rounded-xl cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-gray-400/20 hover:transform hover:scale-105 hover:-translate-y-1 glow-effect ${

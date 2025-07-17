@@ -13,6 +13,18 @@ export default function Footer() {
         <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
           Aspiring Software engineer and a second year university student.
         </p>
+        <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+          Email:{" "}
+          <span className="text-gradient font-semibold">
+            rinatdemchenko@gmail.com
+          </span>
+          <br />
+          Phone:{" "}
+          <span className="text-gradient font-semibold">
+            +421950513347
+          </span> |{" "}
+          <span className="text-gradient font-semibold">+380636918815</span>
+        </p>
         <p className="text-gray-500 text-xs">
           © {new Date().getFullYear()} All rights reserved.
         </p>

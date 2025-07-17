@@ -47,7 +47,7 @@ export default function Project({
   };
 
   return (
-    <div className="glass-card backdrop-blur-md p-6 rounded-lg flex min-h-140 flex-col gap-5 w-[95%] max-w-[450px] border-2 border-gray-700/60">
+    <div className="glass-card backdrop-blur-sm p-6 rounded-lg flex min-h-140 flex-col gap-5 w-[95%] max-w-[450px] border-2 border-gray-700/60">
       <div className="w-full flex flex-row items-center justify-center h-[200px] bg-gray-700/30 rounded-lg relative overflow-hidden group">
         {/* slider images */}
         <div
@@ -118,7 +118,7 @@ export default function Project({
           href={links[0]}
           rel="noopener noreferrer"
           target="_blank"
-          className="glass backdrop-blur-sm px-4 py-3 overflow-hidden shimmer-animation glow-effect rounded-lg text-white text-sm font-medium flex items-center gap-2 transition-all duration-300 hover:bg-gray-600/40 hover:shadow-lg hover:shadow-gray-400/20 border border-gray-600/50 hover:border-gray-500/70"
+          className="glass px-4 py-3 overflow-hidden shimmer-animation glow-effect rounded-lg text-white text-sm font-medium flex items-center gap-2 transition-all duration-300 hover:bg-gray-600/40 hover:shadow-lg hover:shadow-gray-400/20 border border-gray-600/50 hover:border-gray-500/70"
         >
           <FaGithub className="w-4 h-4" />
           GitHub
@@ -127,7 +127,7 @@ export default function Project({
           href={links[1]}
           rel="noopener noreferrer"
           target="_blank"
-          className="glass backdrop-blur-sm px-4 py-3 overflow-hidden shimmer-animation glow-effect rounded-lg text-white text-sm font-medium flex items-center gap-2 transition-all duration-300 hover:bg-gray-600/40 hover:shadow-lg hover:shadow-gray-400/20 border border-gray-600/50 hover:border-gray-500/70"
+          className="glass px-4 py-3 overflow-hidden shimmer-animation glow-effect rounded-lg text-white text-sm font-medium flex items-center gap-2 transition-all duration-300 hover:bg-gray-600/40 hover:shadow-lg hover:shadow-gray-400/20 border border-gray-600/50 hover:border-gray-500/70"
         >
           <FaGlobe className="w-4 h-4" />
           Live
@@ -138,7 +138,7 @@ export default function Project({
         {technologies.map((technology, index) => (
           <div
             key={technology}
-            className="glass-card backdrop-blur-sm px-3 py-2 rounded-full text-white text-xs font-medium border border-gray-600/50 animate-fade-in"
+            className="glass-card backdrop-blur px-3 py-2 rounded-full text-white text-xs font-medium border border-gray-600/50 animate-fade-in"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             {technology}
