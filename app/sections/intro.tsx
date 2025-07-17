@@ -104,7 +104,7 @@ export default function Intro() {
           className="flex gap-4 mt-4 mb-10 md:mb-0"
         >
           <Link
-            href="mailto:rinatdemchenko@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=rinatdemchenko@gmail.com"
             rel="noopener noreferrer"
             target="_blank"
             className="button-primary shimmer-animation glow-effect px-6 py-3 rounded-xl font-semibold text-white cursor-pointer transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2"
@@ -141,7 +141,7 @@ export default function Intro() {
           <Link
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/RinatDemcenko"
+            href="https://github.com/RinatDemchenko"
             className="text-white text-lg bg-blue-500/10 p-3 rounded-lg border-teal-transparent social-icon cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:scale-110"
           >
             <FaGithub className="rounded-lg" size={24} />

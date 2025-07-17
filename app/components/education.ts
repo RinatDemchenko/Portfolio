@@ -45,7 +45,7 @@ export const education = {
       description: "Web development basics course by Colt Steele(Udemy)",
       date: "2024",
       image: "/icons/udemy.png",
-      certificate: "/course_certificates/udemy.png",
+      certificate: "/course_certificates/udemy.jpg",
     },
     {
       name: "GoITeens",
