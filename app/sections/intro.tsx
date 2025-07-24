@@ -7,7 +7,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaTelegram,
-  FaDownload,
+  // FaDownload,
   FaEnvelope,
   FaLaptopCode,
   FaMapMarkerAlt,
