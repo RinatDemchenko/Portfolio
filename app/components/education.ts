@@ -18,19 +18,19 @@ export const education = {
     conformation: "/confirmation.jpg",
   },
   courses: [
-    {
-      name: "Nextjs fundamentals",
-      description: "Nextjs fundamentals course by FrontEnd Masters",
-      date: "2025",
-      image: "/icons/frontendmasters.png",
-      certificate: "/course_certificates/placeholder.png",
-    },
+    // {
+    //   name: "Nextjs fundamentals",
+    //   description: "Nextjs fundamentals course by FrontEnd Masters",
+    //   date: "2025",
+    //   image: "/icons/frontendmasters.png",
+    //   certificate: "/course_certificates/placeholder.png",
+    // },
     {
       name: "Introduction to React",
       description: "Introduction to React course by FrontEnd Masters",
       date: "2025",
       image: "/icons/frontendmasters.png",
-      certificate: "/course_certificates/placeholder.png",
+      certificate: "/course_certificates/react_intro.pdf",
     },
     {
       name: "Javascript, the hard parts",
@@ -38,7 +38,7 @@ export const education = {
         "Course by FrontEnd Masters covering concepts like closures, prototypes and promises",
       date: "2025",
       image: "/icons/frontendmasters.png",
-      certificate: "/course_certificates/placeholder.png",
+      certificate: "/course_certificates/js_hardparts.pdf",
     },
     {
       name: "Web developer Bootcamp",

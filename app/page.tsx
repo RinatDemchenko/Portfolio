@@ -34,7 +34,7 @@ export default function Home() {
           className="w-screen min-h-screen flex flex-col items-center justify-start background-reverse py-20"
         >
           <h1 className="text-white text-5xl text-center font-bold mb-16 mt-8 z-10 text-neon-glow">
-            My recent projects
+            Personal projects
           </h1>
           <Projects />
         </div>

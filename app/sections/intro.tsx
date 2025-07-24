@@ -112,7 +112,7 @@ export default function Intro() {
             <FaEnvelope size={16} />
             Email me
           </Link>
-          <Link
+          {/* <Link
             rel="noopener noreferrer"
             target="_blank"
             href="/CV.pdf"
@@ -120,7 +120,7 @@ export default function Intro() {
           >
             <FaDownload size={16} />
             Download CV
-          </Link>
+          </Link> */}
         </motion.div>
 
         {/* Social media icons */}
