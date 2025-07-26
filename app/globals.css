@@ -144,13 +144,6 @@ body {
   animation: gradient-shift 5s ease-in-out infinite;
 }
 
-.intro-image {
-  filter: drop-shadow(0 0 20px rgba(78, 237, 255, 0.3));
-}
-
-.intro-image:hover {
-  filter: drop-shadow(0 0 30px rgba(78, 237, 255, 0.5));
-}
 
 .info-text {
   position: relative;

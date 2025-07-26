@@ -30,8 +30,8 @@ export const particlesConfig: ISourceOptions = {
         mode: "slow",
         parallax: {
           enable: true,
-          force: 15,
-          smooth: 10,
+          force: 12,
+          smooth: 20,
         },
       },
       resize: {
@@ -92,7 +92,7 @@ export const particlesConfig: ISourceOptions = {
         width: 900,
         height: 900,
       },
-      value: 85,
+      value: 75,
     },
     opacity: {
       value: {
@@ -138,13 +138,36 @@ export const particlesConfig: ISourceOptions = {
       options: {
         particles: {
           number: {
-            value: 50,
+            value: 45,
           },
           move: {
             speed: {
               min: 0.5,
               max: 2,
             },
+          },
+        },
+        interactivity: {
+          events: {
+            onClick: {
+              enable: false,
+            },
+            onHover: {
+              enable: false,
+              parallax: {
+                enable: false,
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      maxWidth: 480,
+      options: {
+        particles: {
+          number: {
+            value: 30,
           },
         },
         interactivity: {

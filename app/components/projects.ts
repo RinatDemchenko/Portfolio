@@ -14,10 +14,10 @@ export const projects = [
     description:
       "A utility app for finding places near(30minutes away from) you on a map and sorting them by categories(screenshots taken with VPN on).",
     images: [
-      "/projects/Mapsy/1.jpg",
-      "/projects/Mapsy/2.jpg",
-      "/projects/Mapsy/3.jpg",
-      "/projects/Mapsy/4.jpg",
+      "https://res.cloudinary.com/dpez2v26l/image/upload/v1753562507/1_mnmoyw.jpg",
+      "https://res.cloudinary.com/dpez2v26l/image/upload/v1753562509/2_yxzox0.jpg",
+      "https://res.cloudinary.com/dpez2v26l/image/upload/v1753562512/3_frufhf.jpg",
+      "https://res.cloudinary.com/dpez2v26l/image/upload/v1753562514/4_s4a5y4.jpg",
     ],
     links: [
       "https://github.com/RinatDemcenko/Mapsy",
@@ -40,11 +40,11 @@ export const projects = [
     description:
       "Recipe app that allows you to find recipes by ingredients and categories.",
     images: [
-      "/projects/Recipeak/1.jpg",
-      "/projects/Recipeak/2.jpg",
-      "/projects/Recipeak/3.jpg",
-      "/projects/Recipeak/4.jpg",
-      "/projects/Recipeak/5.jpg",
+      "https://res.cloudinary.com/dpez2v26l/image/upload/v1753562316/1_fbqsbn.jpg",
+      "https://res.cloudinary.com/dpez2v26l/image/upload/v1753562318/2_wlhwqj.jpg",
+      "https://res.cloudinary.com/dpez2v26l/image/upload/v1753562317/3_pvwhr2.jpg",
+      "https://res.cloudinary.com/dpez2v26l/image/upload/v1753562318/4_josx80.jpg",
+      "https://res.cloudinary.com/dpez2v26l/image/upload/v1753562319/5_se75xj.jpg",
     ],
     links: [
       "https://github.com/RinatDemcenko/ReciPeak",

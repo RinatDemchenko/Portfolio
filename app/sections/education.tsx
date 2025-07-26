@@ -86,10 +86,10 @@ export default function Education() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="glass-card backdrop-blur-sm p-8 rounded-2xl border-4 border-gray-700/60 max-w-2xl w-full hover:shadow-2xl hover:shadow-blue-400/10 hover:border-blue-100/40 transform hover:scale-[1.02] transition-all duration-500">
+            <div className="glass-card backdrop-blur-sm p-8 rounded-2xl border-4 border-gray-700/60 max-w-2xl w-full hover:shadow-2xl hover:shadow-blue-400/10 hover:border-blue-100/40 transform hover:scale-[1.02] transition-all duration-500 group">
               <div className="flex flex-col md:flex-row gap-6 items-center">
                 {/* University logo */}
-                <div className="w-24 h-24 rounded-full bg-blue-400/20 flex items-center justify-center border-2 border-blue-400/30 hover:bg-blue-400/30 hover:border-blue-400/50 hover:scale-110 transition-all duration-300 shadow-lg shadow-blue-400/20">
+                <div className="w-24 h-24 rounded-full bg-blue-400/20 flex items-center justify-center border-2 border-blue-400/30 hover:bg-blue-400/30 group-hover:border-blue-400/50 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-blue-400/20">
                   <Image
                     src={education.university.image}
                     alt={education.university.name}
@@ -101,7 +101,7 @@ export default function Education() {
 
                 {/* University information */}
                 <div className="flex-1 text-center md:text-left space-y-3">
-                  <h3 className="text-2xl font-bold text-blue-400 mb-2 hover:text-blue-300 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-blue-400 mb-2 group-hover:text-blue-300 transition-colors duration-300">
                     {education.university.name}
                   </h3>
                   <p className="text-gray-300 leading-relaxed text-base">
@@ -155,57 +155,81 @@ export default function Education() {
             className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 w-full"
           >
             {education.courses.map((course, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="glass-card backdrop-blur-sm p-6 rounded-2xl border-2 border-gray-700/60 hover:shadow-xl hover:shadow-green-400/20 hover:border-green-400/30 transition-all duration-300 group"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative group"
               >
-                {/* Course logo */}
-                <div className="flex justify-center mb-4">
-                  <div className="w-20 h-20 rounded-2xl bg-green-400/20 flex items-center justify-center border-2 border-green-400/30 group-hover:bg-green-400/30 group-hover:border-green-400/50 group-hover:scale-105 transition-all duration-300 shadow-lg shadow-green-400/10">
-                    <Image
-                      src={course.image}
-                      alt={course.name}
-                      width={48}
-                      height={48}
-                      className="transition-all duration-300"
-                    />
+                {/* Background gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-900/30 via-gray-800/20 to-gray-900/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="min-h-120 relative z-10 glass-card backdrop-blur-sm p-6 rounded-2xl border-2 border-gray-700/60 hover:border-green-400/40 hover:shadow-2xl hover:shadow-green-400/10 transform hover:scale-[1.02] transition-all duration-500 group">
+                  {/* Course logo */}
+                  <div className="flex justify-center mb-6 transition-all duration-300">
+                    <div className="relative">
+                      <div className="w-20 h-20 rounded-2xl bg-green-400/20 flex items-center justify-center border-2 border-green-400/30 group-hover:bg-green-400/30 group-hover:border-green-400/50 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-green-400/10 group-hover:shadow-green-400/20">
+                        <Image
+                          src={course.image}
+                          alt={course.name}
+                          width={48}
+                          height={48}
+                          className="transition-all duration-300 group-hover:scale-110"
+                        />
+                      </div>
+                      {/* Glow effect */}
+                      <div className="absolute inset-0 w-20 h-20 rounded-2xl bg-green-400/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                  </div>
+
+                  {/* Card content */}
+                  <div className="flex flex-col gap-4 text-center">
+                    {/* Course title */}
+                    <div className="space-y-2">
+                      <h4 className="text-xl font-bold text-green-400 group-hover:text-green-300 transition-colors duration-300 line-clamp-2">
+                        {course.name}
+                      </h4>
+                      <div className="w-20 h-0.5 bg-gradient-to-r from-green-400 to-blue-400 rounded-full mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+
+                    {/* Date */}
+                    <div className="flex items-center justify-center gap-2 text-green-300 mb-2 group">
+                      <div className="p-1.5 bg-green-500/20 rounded-lg group-hover:bg-green-500/30 transition-colors">
+                        <FaCalendarAlt className="text-sm" />
+                      </div>
+                      <span className="text-sm font-medium">{course.date}</span>
+                    </div>
+
+                    {/* Divider */}
+                    <div className="h-px bg-gradient-to-r from-transparent via-green-400/30 to-transparent mb-2"></div>
+
+                    {/* Description */}
+                    <p className="text-gray-300 min-h-25 flex justify-center items-center text-sm leading-relaxed flex-1 line-clamp-3 group-hover:text-gray-200 transition-colors duration-300">
+                      {course.description}
+                    </p>
+
+                    {/* Certificate button */}
+                    <div className="flex justify-center">
+                      <Link
+                        target="_blank"
+                        href={course.certificate}
+                        className="group/btn relative overflow-hidden flex items-center gap-2 px-6 py-3 rounded-xl bg-green-400/20 border border-green-400/30 text-green-400 hover:bg-green-400/30 hover:border-green-400/50 hover:scale-105 hover:shadow-lg hover:shadow-green-400/25 transition-all duration-300"
+                      >
+                        {/* Shimmer effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-400/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
+
+                        <div className="relative z-10 flex items-center gap-2">
+                          <FaCertificate className="text-sm group-hover/btn:scale-110 transition-transform duration-300" />
+                          <span className="text-sm font-medium">
+                            Certificate
+                          </span>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-
-                {/* Card content */}
-                <div className="flex flex-col gap-3 text-center">
-                  {/* Course title */}
-                  <h4 className="text-xl font-bold text-green-400 group-hover:text-green-300 transition-colors duration-300 line-clamp-2">
-                    {course.name}
-                  </h4>
-
-                  {/* Date */}
-                  <div className="flex items-center justify-center gap-2 text-green-300 mb-2">
-                    <FaCalendarAlt className="text-sm" />
-                    <span className="text-sm font-medium">{course.date}</span>
-                  </div>
-
-                  {/* Divider */}
-                  <div className="h-px bg-gradient-to-r from-transparent via-green-400/30 to-transparent mb-2"></div>
-
-                  {/* Description */}
-                  <p className="text-gray-300 text-sm leading-relaxed flex-1 mb-4 line-clamp-3">
-                    {course.description}
-                  </p>
-
-                  {/* Certificate button */}
-                  <div className="flex justify-center">
-                    <Link
-                      target="_blank"
-                      href={course.certificate}
-                      className="flex before:bg-[linear-gradient(135deg,transparent,rgba(34,197,94,0.2),transparent)] shimmer-animation-colorless relative overflow-hidden items-center gap-2 px-6 py-3 rounded-xl bg-green-400/20 border border-green-400/30 text-green-400 hover:bg-green-400/30 hover:border-green-400/50 hover:scale-105 hover:shadow-lg hover:shadow-green-400/25 transition-all duration-300 group-hover:translate-y-[-2px]"
-                    >
-                      <FaCertificate className="text-sm" />
-                      <span className="text-sm font-medium">Certificate</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         )}

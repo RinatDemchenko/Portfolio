@@ -7,7 +7,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaTelegram,
-  // FaDownload,
+  FaDownload,
   FaEnvelope,
   FaLaptopCode,
   FaMapMarkerAlt,
@@ -32,13 +32,13 @@ export default function Intro() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <motion.div
-          animate={{ y: [0, -20, 0] }}
+          animate={{ y: [10, -10, 10] }}
           transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
         >
           <Image
-            src="/picture.png"
+            src="https://res.cloudinary.com/dpez2v26l/image/upload/v1753562595/picture_cpes5l.png"
             alt="portfolioImage"
-            className="mt-12 rounded-lg intro-image md:mt-0 transition-all duration-300 hover:scale-105"
+            className="mt-12 rounded-lg intro-image md:mt-0 transition-all duration-300"
             width={280}
             height={450}
           />
@@ -72,7 +72,9 @@ export default function Intro() {
               className="text-green-300 transition-all duration-300 hover:scale-110"
               size={16}
             />
+            <span className="w-45 sm:w-full">
             Fullstack Developer | UI/UX Designer
+            </span>
           </p>
         </motion.div>
 
@@ -103,6 +105,7 @@ export default function Intro() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
           className="flex gap-4 mt-4 mb-10 md:mb-0"
         >
+          {/* no, you can't just replace the link with a mailto: link, won't open in the new tab*/}
           <Link
             href="https://mail.google.com/mail/?view=cm&fs=1&to=rinatdemchenko@gmail.com"
             rel="noopener noreferrer"
@@ -112,7 +115,7 @@ export default function Intro() {
             <FaEnvelope size={16} />
             Email me
           </Link>
-          {/* <Link
+          <Link
             rel="noopener noreferrer"
             target="_blank"
             href="/CV.pdf"
@@ -120,7 +123,7 @@ export default function Intro() {
           >
             <FaDownload size={16} />
             Download CV
-          </Link> */}
+          </Link>
         </motion.div>
 
         {/* Social media icons */}
@@ -169,7 +172,7 @@ export default function Intro() {
       <motion.div
         animate={{ y: [0, 8, 0] }}
         transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-        className="absolute bottom-22 md:bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
+        className="absolute bottom-26 md:bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
         onClick={scrollToNextSection}
       >
         <FaChevronDown
