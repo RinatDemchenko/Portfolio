@@ -36,7 +36,7 @@ export default function Intro() {
           transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
         >
           <Image
-            src="https://res.cloudinary.com/dpez2v26l/image/upload/v1753562595/picture_cpes5l.png"
+            src="https://res.cloudinary.com/dpez2v26l/image/upload/v1753680616/photo_4_2025-07-28_07-03-36-removebg-preview_2_tjedey.png"
             alt="portfolioImage"
             className="mt-12 rounded-lg intro-image md:mt-0 transition-all duration-300"
             width={280}

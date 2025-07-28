@@ -58,7 +58,7 @@ export const skills = [
   {
     name: "Vercel",
     background: "#ffffff",
-    image: "/icons/vercel.svg",
+    image: "/icons/vercel.png",
     description: "Application deployment platform.",
     categories: ["DevOps"],
   },
