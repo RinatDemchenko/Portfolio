@@ -13,13 +13,13 @@ export const skills = [
     description: "A JavaScript frontend library.",
     categories: ["Frontend"],
   },
-  // {
-  //   name: "Next.js",
-  //   background: "#FFFFFF",
-  //   image: "/icons/nextjs.png",
-  //   description: "A React framework",
-  //   categories: ["Frontend", "Backend"],
-  // },
+  {
+    name: "Next.js",
+    background: "#FFFFFF",
+    image: "/icons/nextjs.png",
+    description: "A React framework",
+    categories: ["Frontend", "Backend"],
+  },
   {
     name: "Tailwind CSS",
     background: "#00ffe5",
@@ -49,9 +49,9 @@ export const skills = [
     categories: ["Database"],
   },
   {
-    name: "MySQL",
+    name: "PostgreSQL",
     background: "#00758F",
-    image: "/icons/mysql.png",
+    image: "/icons/postgresql.png",
     description: "Relational databases.",
     categories: ["Database"],
   },

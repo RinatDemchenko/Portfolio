@@ -118,11 +118,11 @@ export default function Intro() {
           <Link
             rel="noopener noreferrer"
             target="_blank"
-            href="/CV.pdf"
+            href="/resume.docx"
             className="button-outline glow-effect px-6 py-3 rounded-xl font-semibold cursor-pointer transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2"
           >
             <FaDownload size={16} />
-            Download CV
+            My resume
           </Link>
         </motion.div>
 
