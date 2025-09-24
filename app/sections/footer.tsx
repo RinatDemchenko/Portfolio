@@ -1,9 +1,5 @@
 import Link from "next/link";
-import {
-  MdEmail,
-  MdPhone,
-  MdDesignServices,
-} from "react-icons/md";
+import { MdEmail, MdPhone, MdDesignServices } from "react-icons/md";
 import { FaLanguage, FaChessKing, FaUserGraduate } from "react-icons/fa";
 
 /**
@@ -22,7 +18,6 @@ export default function Footer() {
         <div className="space-y-6">
           <div className="space-y-3">
             <h2 className="text-white text-3xl font-bold">Rinat Demchenko</h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
           </div>
 
           <p className="text-gray-300 text-sm leading-relaxed max-w-xs">
@@ -78,7 +73,6 @@ export default function Footer() {
         <div className="space-y-6">
           <div className="space-y-3">
             <h3 className="text-white text-xl font-semibold">Quick access</h3>
-            <div className="w-12 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-2 gap-3">
@@ -128,9 +122,8 @@ export default function Footer() {
         <div className="space-y-6">
           <div className="space-y-3">
             <h3 className="text-white text-xl font-semibold">
-              Little things I&apos;m(very) proud of
+              Little things I&apos;m proud of
             </h3>
-            <div className="w-16 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
           </div>
 
           <div className="space-y-4">

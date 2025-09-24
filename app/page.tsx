@@ -9,6 +9,7 @@ import Skills from "./sections/skills";
 import Projects from "./sections/projects";
 import Footer from "./sections/footer";
 import Education from "./sections/education";
+import NeonTitle from "./components/NeonTitle";
 
 export default function Home() {
   return (
@@ -24,27 +25,21 @@ export default function Home() {
           id="skills"
           className="w-screen min-h-screen flex flex-col items-center justify-start general-background py-20"
         >
-          <h1 className="text-white text-5xl text-center font-bold mb-16 mt-8 z-10 text-neon-glow">
-            Technologies I use
-          </h1>
+          <NeonTitle>Technologies I use</NeonTitle>
           <Skills />
         </div>
         <div
           id="projects"
           className="w-screen min-h-screen flex flex-col items-center justify-start background-reverse py-20"
         >
-          <h1 className="text-white text-5xl text-center font-bold mb-16 mt-8 z-10 text-neon-glow">
-            Personal projects
-          </h1>
+          <NeonTitle>Personal projects</NeonTitle>
           <Projects />
         </div>
         <div
           id="education"
           className="w-screen min-h-screen flex flex-col items-center justify-start general-background py-20"
         >
-          <h1 className="text-white text-5xl text-center font-bold mb-16 mt-8 z-10 text-neon-glow">
-            Education
-          </h1>
+          <NeonTitle>Education</NeonTitle>
           <Education />
         </div>
       </main>

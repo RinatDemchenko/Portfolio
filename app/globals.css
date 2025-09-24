@@ -1,5 +1,6 @@
 @import "tailwindcss";
-
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
 @theme {
   --breakpoint-3xl: 112.5rem;
 }
@@ -8,6 +9,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   background: black;
+  font-family: "Saira", sans-serif;
 }
 
 .glass-card {
@@ -17,37 +19,10 @@ body {
   isolation: isolate;
 }
 
-.social-icon {
-  box-shadow: 0 4px 30px rgba(32, 36, 255, 0.2);
-  position: relative;
-}
-
-.social-icon::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: radial-gradient(
-    circle,
-    rgba(78, 237, 255, 0.3) 0%,
-    transparent 70%
-  );
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s ease;
-  z-index: -1;
-}
-
 .social-icon:hover {
+  box-shadow: 0 4px 30px rgba(32, 36, 255, 0.2);
   background: rgba(45, 167, 255, 0.2);
-  box-shadow: 0 6px 40px rgba(32, 36, 255, 0.3);
-}
-
-.social-icon:hover::before {
-  width: 60px;
-  height: 60px;
+  position: relative;
 }
 
 .border-teal-transparent {
@@ -122,26 +97,34 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(to right, #4eedff 0%, #5e8eff 50%, #536fff 100%);
+  place-self: center;
+  background: linear-gradient(90deg, #85f3ff, #f2f0fd, #87d0c9, #85f3ff) -100%/
+    200%;
+
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
-  background-size: 200% 200%;
-  animation: gradient-shift 3s ease infinite;
+  color: transparent;
+  font: exo, sans-serif;
+  animation: text-shimmer 2s linear infinite;
 }
 
-.text-gradient-white {
-  background: linear-gradient(
-    to right,
-    #ffffffd1 0%,
-    #ffffff73 50%,
-    #ffffffd5 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  background-size: 200% 200%;
-  animation: gradient-shift 5s ease-in-out infinite;
+@keyframes text-shimmer {
+  from {
+    background-position: 100%;
+  }
+}
+
+.neon {
+  color: #ffffff;
+  text-shadow: 0px 0px 10px rgb(from #d0cce3 r g b / 0.5);
+}
+
+.flicker-slow {
+  animation: flicker 4s ease-in-out infinite;
+}
+
+.flicker-fast {
+  animation: flicker 1.5s ease-in-out infinite;
 }
 
 .info-text {
@@ -154,14 +137,107 @@ body {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-.button-primary {
-  background: linear-gradient(45deg, #4eedff 0%, #5e8eff 50%, #536fff 100%);
+/* Button Styles */
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    transform 0.3s ease, box-shadow 0.4s ease;
   position: relative;
+  z-index: 10;
   overflow: hidden;
 }
 
-.button-primary:hover {
-  box-shadow: 0 10px 20px rgba(78, 237, 255, 0.3);
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: scale(0);
+  transition: transform 0.6s ease-out;
+  z-index: -1;
+}
+
+.btn-primary:hover::after {
+  transform: scale(1);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #a777e3, #6e8efb);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.btn-primary:active {
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 12px;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: letter-spacing 0.3s ease;
+}
+
+.btn-primary:hover .text {
+  letter-spacing: 1px;
+}
+
+.email-icon {
+  fill: white;
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    fill 0.3s ease;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.btn-primary:hover .email-icon {
+  transform: rotate(360deg) scale(1.1);
+  fill: #ffffff;
+}
+
+/* Animation for Pulse Effect */
+@keyframes btn-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(110, 142, 251, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(110, 142, 251, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(110, 142, 251, 0);
+  }
+}
+
+.btn-primary {
+  animation: btn-pulse 3s infinite;
+}
+
+/* Hover Ripple Effect */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
 
 .button-outline {
@@ -174,6 +250,38 @@ body {
   background: rgba(78, 237, 255, 0.1);
   border-color: rgba(78, 237, 255, 0.8);
   box-shadow: 0 8px 16px rgba(78, 237, 255, 0.2);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.button-outline span {
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-outline svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button-outline:active {
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.button-outline:hover .svg-wrapper {
+  transform: scale(1.25);
+  transition: 0.5s linear;
+}
+
+.button-outline:hover svg {
+  transform: translateX(2.8em) scale(1.4);
+  fill: #fff;
+}
+
+.button-outline:hover span {
+  opacity: 0;
+  transition: 0.2s linear;
 }
 
 .glow-effect {
@@ -243,6 +351,7 @@ body {
 }
 
 /* Keyframes */
+
 @keyframes gradient-shift {
   0% {
     background-position: 0% 50%;
@@ -285,6 +394,27 @@ body {
   }
 }
 
+@keyframes flicker {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 0.99;
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+  }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
 }
@@ -323,10 +453,4 @@ body {
 html {
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 255, 208, 0.7) transparent;
-}
-
-/* Subtle white neon glow effect for section headers */
-.text-neon-glow {
-  text-shadow: 0 0 3px rgba(255, 255, 255, 0.2),
-    0 0 6px rgba(255, 255, 255, 0.15);
 }

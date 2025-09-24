@@ -25,7 +25,6 @@ export default function Intro() {
 
   return (
     <>
-      {/* Animated image on the left */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -50,15 +49,17 @@ export default function Intro() {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="flex flex-col gap-4 justify-center md:items-start items-center"
+        className="flex flex-col gap-4 justify-center items-center md:items-start"
       >
-        <h1 className="text-4xl font-bold max-w-md text-center md:text-left md:text-6xl">
-          <span className="text-gradient hover:bg-white transition-all duration-300">
-            Rinat
-          </span>{" "}
-          <span className="text-gradient-white transition-all duration-300">
-            Demchenko
-          </span>
+        <h1 className="text-4xl font-bold max-w-md text-center  md:text-6xl md:text-left neon">
+          <span className="flicker-slow">R</span>i
+          <span className="flicker-fast">n</span>a
+          <span className="flicker-slow">t</span>{" "}
+          <span className="flicker-fast">De</span>
+          <span className="flicker-slow">mc</span>
+          <span className="flicker-fast">h</span>e
+          <span className="flicker-slow">n</span>
+          <span className="flicker-fast">ko</span>
         </h1>
 
         {/* Professional title */}
@@ -72,9 +73,7 @@ export default function Intro() {
               className="text-green-300 transition-all duration-300 hover:scale-110"
               size={16}
             />
-            <span className="w-45 sm:w-full">
-            Fullstack Developer | UI/UX Designer
-            </span>
+            <span className="w-45 sm:w-full">Fullstack Web Developer</span>
           </p>
         </motion.div>
 
@@ -108,21 +107,22 @@ export default function Intro() {
           {/* no, you can't just replace the link with a mailto: link, won't open in the new tab*/}
           <Link
             href="https://mail.google.com/mail/?view=cm&fs=1&to=rinatdemchenko@gmail.com"
+            className="btn-primary"
             rel="noopener noreferrer"
             target="_blank"
-            className="button-primary shimmer-animation glow-effect px-6 py-3 rounded-xl font-semibold text-white cursor-pointer transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2"
           >
-            <FaEnvelope size={16} />
-            Email me
+            <span className="text">Email me</span>
+            <FaEnvelope size={16} className="email-icon" />
           </Link>
+
           <Link
             rel="noopener noreferrer"
             target="_blank"
             href="/resume.docx"
-            className="button-outline glow-effect px-6 py-3 rounded-xl font-semibold cursor-pointer transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2"
+            className="button-outline glow-effect px-6 py-3 rounded-xl font-semibold cursor-pointer transition-all duration-300 flex items-center gap-2"
           >
             <FaDownload size={16} />
-            My resume
+            <span>My resume</span>
           </Link>
         </motion.div>
 
@@ -137,33 +137,45 @@ export default function Intro() {
             rel="noopener noreferrer"
             target="_blank"
             href="https://www.linkedin.com/in/rinat-demchenko-28ab29372"
-            className="text-white text-lg bg-blue-500/10 p-3 rounded-lg border-teal-transparent social-icon cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:scale-110"
+            className="p-4 rounded-full backdrop-blur-lg border border-blue-500/20 bg-gradient-to-tr from-black/60 to-black/40 shadow-lg hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-110 hover:rotate-3 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-blue-500/50 hover:bg-gradient-to-tr hover:from-blue-500/10 hover:to-black/40 group relative overflow-hidden"
           >
-            <FaLinkedin className="rounded-lg" size={24} />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-400/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
+            <div className="relative z-10">
+              <FaLinkedin className="w-6 h-6 text-blue-500 group-hover:text-blue-400 transition-colors duration-300" />
+            </div>
           </Link>
           <Link
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/RinatDemchenko"
-            className="text-white text-lg bg-blue-500/10 p-3 rounded-lg border-teal-transparent social-icon cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:scale-110"
+            className="p-4 rounded-full backdrop-blur-lg border border-white/10 bg-gradient-to-tr from-black/60 to-black/40 shadow-lg hover:shadow-2xl hover:shadow-white/20 hover:scale-110 hover:-rotate-2 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-white/30 hover:bg-gradient-to-tr hover:from-white/10 hover:to-black/40 group relative overflow-hidden"
           >
-            <FaGithub className="rounded-lg" size={24} />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
+            <div className="relative z-10">
+              <FaGithub className="w-6 h-6 text-white group-hover:text-white/90 transition-colors duration-300" />
+            </div>
           </Link>
           <Link
             rel="noopener noreferrer"
             target="_blank"
             href="https://t.me/RinatDem"
-            className="text-white text-lg bg-blue-500/10 p-3 rounded-lg border-teal-transparent social-icon cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:scale-110"
+            className="p-4 rounded-full backdrop-blur-lg border border-sky-500/20 bg-gradient-to-tr from-black/60 to-black/40 shadow-lg hover:shadow-2xl hover:shadow-sky-500/30 hover:scale-110 hover:rotate-2 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-sky-500/50 hover:bg-gradient-to-tr hover:from-sky-500/10 hover:to-black/40 group relative overflow-hidden"
           >
-            <FaTelegram className="rounded-lg" size={24} />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-sky-400/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
+            <div className="relative z-10">
+              <FaTelegram className="w-6 h-6 text-sky-500 group-hover:text-sky-400 transition-colors duration-300" />
+            </div>
           </Link>
           <Link
             rel="noopener noreferrer"
             target="_blank"
             href="https://wa.me/380636918815"
-            className="text-white text-lg bg-blue-500/10 p-3 rounded-lg border-teal-transparent social-icon cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:scale-110"
+            className="p-4 rounded-full backdrop-blur-lg border border-teal-500/20 bg-gradient-to-tr from-black/60 to-black/40 shadow-lg hover:shadow-2xl hover:shadow-teal-500/30 hover:scale-110 hover:-rotate-3 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-teal-500/50 hover:bg-gradient-to-tr hover:from-teal-500/10 hover:to-black/40 group relative overflow-hidden"
           >
-            <FaWhatsapp className="rounded-lg" size={24} />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-teal-400/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
+            <div className="relative z-10">
+              <FaWhatsapp className="w-6 h-6 text-teal-500 group-hover:text-teal-400 transition-colors duration-300" />
+            </div>
           </Link>
         </motion.div>
       </motion.div>
