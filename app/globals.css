@@ -7,13 +7,15 @@
 
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   background: black;
   font-family: "Saira", sans-serif;
 }
 
 .glass-card {
   background: rgba(73, 73, 73, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   position: relative;
   z-index: 1;
   isolation: isolate;
@@ -454,3 +456,25 @@ html {
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 255, 208, 0.7) transparent;
 }
+
+@media (min-width: 1024px) {
+  .mySwiper{
+    overflow: visible !important;
+  }
+}
+.mySwiper .swiper-slide {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
+}
+
+.mySwiper .swiper-slide-active {
+  transform: scale(1) !important;
+  filter: none !important;
+}
+
+.mySwiper .swiper-slide:not(.swiper-slide-active) {
+  filter: brightness(0.7) contrast(0.8);
+}
+

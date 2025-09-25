@@ -182,17 +182,7 @@ export default function Education() {
                       <div className="absolute inset-0 w-20 h-20 rounded-2xl bg-green-400/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
                   </div>
-
-                  {/* Card content */}
-                  <div className="flex flex-col gap-4 text-center">
-                    {/* Course title */}
-                    <div className="space-y-2">
-                      <h4 className="text-xl font-bold text-green-400 group-hover:text-green-300 transition-colors duration-300 line-clamp-2">
-                        {course.name}
-                      </h4>
-                      <div className="w-20 h-0.5 bg-gradient-to-r from-green-400 to-blue-400 rounded-full mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    </div>
-
+                  
                     {/* Date */}
                     <div className="flex items-center justify-center gap-2 text-green-300 mb-2 group">
                       <div className="p-1.5 bg-green-500/20 rounded-lg group-hover:bg-green-500/30 transition-colors">
@@ -200,6 +190,15 @@ export default function Education() {
                       </div>
                       <span className="text-sm font-medium">{course.date}</span>
                     </div>
+                  {/* Card content */}
+                  <div className="flex flex-col gap-4 text-center">
+                    {/* Course title */}
+                    <div className="space-y-2">
+                      <h4 className="text-xl font-bold text-green-400 group-hover:text-green-300 transition-colors duration-300 line-clamp-2">
+                        {course.name}
+                      </h4>
+                    </div>
+
 
                     {/* Divider */}
                     <div className="h-px bg-gradient-to-r from-transparent via-green-400/30 to-transparent mb-2"></div>

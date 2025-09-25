@@ -73,7 +73,7 @@ export default function Intro() {
               className="text-green-300 transition-all duration-300 hover:scale-110"
               size={16}
             />
-            <span className="w-45 sm:w-full">Fullstack Web Developer</span>
+            <span>Fullstack Web Developer</span>
           </p>
         </motion.div>
 
