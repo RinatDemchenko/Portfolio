@@ -47,7 +47,7 @@ export default function Project({
   };
 
   return (
-    <div className="glass-card p-6 rounded-lg flex min-h-140 flex-col gap-5 border-2 border-gray-700/60">
+    <div className="glass-card p-6 rounded-lg flex min-h-140 flex-col gap-5 border-2 border-gray-700/60 backdrop-blur-sm">
       <div className="w-full flex flex-row items-center justify-center h-[200px] bg-gray-700/30 rounded-lg relative overflow-hidden group">
         {/* slider images */}
         <div
