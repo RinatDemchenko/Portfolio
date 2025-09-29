@@ -38,7 +38,7 @@ export const projects = [
   {
     name: "ZlavySK",
     description:
-      "A discount scraper for the most popular Slovak supermarkets(Lidl, Kaufland, etc.) that collects and organizes most efficient offers",
+      "(UNFINISHED) discount scraper for the most popular Slovak supermarkets(Lidl, Kaufland, etc.) that collects and organizes most efficient offers",
     images: [
       "https://res.cloudinary.com/dpez2v26l/image/upload/v1758755528/Screenshot_7_jdaojl.jpg",
       "https://res.cloudinary.com/dpez2v26l/image/upload/v1758755527/Screenshot_8_emwobi.jpg",
