@@ -38,10 +38,25 @@ export const projects = [
   {
     name: "ZlavySK",
     description:
-      "Utility app for scraping sales date from most popular slovakian supermarkets(Lidl, Kaufland, etc.).",
-    images: ["https://res.cloudinary.com/dpez2v26l/image/upload/v1758755528/Screenshot_7_jdaojl.jpg", "https://res.cloudinary.com/dpez2v26l/image/upload/v1758755527/Screenshot_8_emwobi.jpg", "https://res.cloudinary.com/dpez2v26l/image/upload/v1758755527/Screenshot_9_xx4wtn.jpg"],
-    links: ["https://github.com/RinatDemchenko/Cenyskplus", "https://cenyskplus.vercel.app/"],
-    technologies: ["React", "TypeScript", "Python", "RestAPI", "Playwright", "BeautifulSoup", "BrightData proxies"],
+      "A discount scraper for the most popular Slovak supermarkets(Lidl, Kaufland, etc.) that collects and organizes most efficient offers",
+    images: [
+      "https://res.cloudinary.com/dpez2v26l/image/upload/v1758755528/Screenshot_7_jdaojl.jpg",
+      "https://res.cloudinary.com/dpez2v26l/image/upload/v1758755527/Screenshot_8_emwobi.jpg",
+      "https://res.cloudinary.com/dpez2v26l/image/upload/v1758755527/Screenshot_9_xx4wtn.jpg",
+    ],
+    links: [
+      "https://github.com/RinatDemchenko/Cenyskplus",
+      "https://cenyskplus.vercel.app/",
+    ],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Python",
+      "RestAPI",
+      "Playwright",
+      "BeautifulSoup",
+      "BrightData proxies",
+    ],
     categories: ["hobby", "noncommercial"],
   },
   {
@@ -62,5 +77,4 @@ export const projects = [
     technologies: ["React", "TypeScript", "Tailwind CSS", "RestAPI"],
     categories: ["hobby", "noncommercial"],
   },
-
 ];

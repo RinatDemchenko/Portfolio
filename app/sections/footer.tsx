@@ -20,10 +20,6 @@ export default function Footer() {
             <h2 className="text-white text-3xl font-bold">Rinat Demchenko</h2>
           </div>
 
-          <p className="text-gray-300 text-sm leading-relaxed max-w-xs">
-            Aspiring Software engineer and a second year university student.
-          </p>
-
           <div className="space-y-3">
             <div className="flex items-center gap-3 group">
               <div className="p-2 bg-blue-500/20 rounded-lg group-hover:bg-blue-500/30 transition-colors">
