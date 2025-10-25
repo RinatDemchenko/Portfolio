@@ -92,7 +92,7 @@ export const particlesConfig: ISourceOptions = {
         width: 900,
         height: 900,
       },
-      value: 40,
+      value: 35,
     },
     opacity: {
       value: {
@@ -138,7 +138,7 @@ export const particlesConfig: ISourceOptions = {
       options: {
         particles: {
           number: {
-            value: 45,
+            value: 30,
           },
           move: {
             speed: {
@@ -167,7 +167,7 @@ export const particlesConfig: ISourceOptions = {
       options: {
         particles: {
           number: {
-            value: 30,
+            value: 25,
           },
         },
         interactivity: {
