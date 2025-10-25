@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { motion } from "framer-motion";
 import {
   FaGithub,
@@ -25,6 +25,13 @@ export default function Intro() {
 
   return (
     <>
+      <Script
+        id="unicorn-studio"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `!function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.33/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();`,
+        }}
+      />
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -33,13 +40,14 @@ export default function Intro() {
         <motion.div
           animate={{ y: [10, -10, 10] }}
           transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+          className="mt-12 relative overflow-hidden md:mt-0"
+          style={{ width: "350px", height: "360px", transform: "scale(1.5)"}}
         >
-          <Image
-            src="https://res.cloudinary.com/dpez2v26l/image/upload/v1753680616/photo_4_2025-07-28_07-03-36-removebg-preview_2_tjedey.png"
-            alt="portfolioImage"
-            className="mt-12 rounded-lg intro-image md:mt-0 transition-all duration-300"
-            width={280}
-            height={450}
+          {/* I know hiding a watermark is a terrible idea, but i'm not that stupid or rich to spend 17$ a month for 1 asset. Why would there be a watermark if i literally made it myself? */}
+          <div
+            data-us-project="WX4jtEaQnV2oSUKRdKYl"
+            className="absolute"
+            style={{ width: "350px", height: "400px", transform: "scale(1.05)"}}
           />
         </motion.div>
       </motion.div>

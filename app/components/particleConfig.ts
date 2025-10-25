@@ -92,7 +92,7 @@ export const particlesConfig: ISourceOptions = {
         width: 900,
         height: 900,
       },
-      value: 75,
+      value: 40,
     },
     opacity: {
       value: {

@@ -17,7 +17,7 @@ export default function Home() {
       <main className="">
         <div
           id="intro"
-          className="w-screen min-h-screen backdrop-blur-[1.5px] flex items-center justify-start gap-10 intro-background md:flex-row flex-col md:justify-center px-4"
+          className="w-screen min-h-screen backdrop-blur-[1.5px] flex items-center justify-start intro-background md:flex-row flex-col md:justify-center px-4"
         >
           <Intro />
         </div>
