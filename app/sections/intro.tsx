@@ -38,14 +38,14 @@ export default function Intro() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <motion.div
-          animate={{ y: [10, -10, 10] }}
+          animate={{ y: [-10, 20, -10] }}
           transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-          className="mt-12 relative overflow-hidden md:mt-0 w-[300px] h-[330px] sm:w-[350px] md:h-[335px]"
+          className="mt-12 relative overflow-y-hidden md:mt-0 w-[300px] h-[330px] sm:w-[400px] sm:h-[360px] lg:w-[450px] lg:h-[440px] md:mr-[-20px] lg:mr-[-30px] md:ml-[-20px] lg:ml-[-40px]"
         >
           {/* I know hiding a watermark is a terrible idea, but i'm not that stupid or rich to spend 17$ a month for 1 asset. Why would there be a watermark if i literally made it myself? */}
           <div
             data-us-project="WX4jtEaQnV2oSUKRdKYl"
-            className="absolute w-[300px] h-[400px] transform scale-100 sm:w-[350px] sm:h-[400px] md:scale-105"
+            className="absolute w-[300px] h-[400px] transform scale-100 sm:w-[400px] sm:h-[450px] lg:w-[450px] lg:h-[550px] overflow-x-visible"
           />
         </motion.div>
       </motion.div>
